@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F5Q1P871"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R9F5Q1P871');
+</script>
+    <title>Путеводитель по Формуле 1</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            color: #eee;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+            background-size: 20px 20px;
+            background-attachment: fixed;
+        }
+
+        a {
+            color: #eee;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 1rem 2rem;
+        }
+
+        header a:hover {
+            color: #f00;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: url('../img/hero.jpg') no-repeat center center/cover;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #f00;
+            color: #fff;
+            text-decoration: none;
+            margin-top: 1rem;
+            border-radius: 5px;
+        }
+
+        .about, .test, .facts, .podium, .sections {
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .sections {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+.about {
+    background: #1c1c1c;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 380px;
+}
+
+.about-text {
+    flex: 1;
+    color: #eee;
+    text-align: left;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h2 {
+    color: #f00;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 0 0 40%;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+        .card {
+            background: #222;
+            padding: 1rem;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .facts {
+            background: #1a1a1a;
+            border-top: 1px solid #333;
+            margin-top: 1.5rem;
+        }
+
+        .facts h2 {
+            color: #f00;
+            margin-bottom: 1rem;
+        }
+
+        .facts ul {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .facts li {
+            padding: 0.5rem 0;
+            font-size: 1.05rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .podium h2 {
+            color: #f00;
+            margin-bottom: 1.5rem;
+        }
+
+        .podium-positions {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .place {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #222;
+            padding: 1rem;
+            border-radius: 10px;
+            width: 130px;
+        }
+
+        .place img {
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+
+        .place.first {
+            transform: translateY(-20px);
+            width: 160px;
+        }
+
+        .place.first img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .place.second img,
+        .place.third img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .place .name {
+            font-weight: bold;
+            color: #eee;
+        }
+
+        .place .team {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .standings-table {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .standing-row {
+            display: flex;
+            justify-content: space-between;
+            background: #222;
+            padding: 0.6rem 1rem;
+            border-radius: 5px;
+        }
+
+        .standing-row .position {
+            color: #f00;
+            font-weight: bold;
+        }
+
+        .standing-row .name {
+            flex: 1;
+            text-align: left;
+            margin-left: 1rem;
+        }
+
+        .standing-row .points {
+            font-weight: bold;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #a00;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #800000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/f1logo.png" height="40px">
+        <nav>
+            <ul>
+                <li><a href="drivers.html">Пилоты</a></li>
+                <li><a href="teams.html">Команды</a></li>
+                <li><a href="circuits.html">Трассы</a></li>
+                <li><a href="season2025.html">Сезон 2025</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Добро пожаловать в путеводитель по Формуле 1!</h1>
+        <p>Узнай все о главной гоночной серии мира</p>
+        <a href="season2025.html" class="btn">Смотреть сезон 2025</a>
+    </section>
+
+    <section class="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>Что такое Формула 1?</h2>
+            <p>Формула 1 — это не просто гонки. Это вершина автоспортивного мастерства, где на трассах по всему миру встречаются самые быстрые болиды и талантливейшие гонщики планеты. Каждое Гран-при — это сложная шахматная партия на скорости свыше 350 км/ч, где важна каждая секунда, каждое действие на пит-лейне и каждая инженерная доработка.</p>
+            <p>За красивым зрелищем скрывается колоссальный труд команд, стратегов и механиков. Новейшие технологии, уникальная аэродинамика, управление из бокс-питлейна и соперничество легендарных брендов делают Формулу 1 не только спортивным состязанием, но и лабораторией будущего для автомобильной индустрии.</p>
+        </div>
+        <div class="about-image">
+            <img src="imggpstartwif.jpg" alt="Болид Формулы 1">
+        </div>
+    </div>
+</section>
+
+
+    <section class="test">
+        <h2>Хотите узнать, кто Вы из гонщиков?</h2>
+        <a href="quiz.html" class="btn">Пройти тест "Кто ты из гонщиков Формулы 1?"</a>
+    </section>
+
+    <section class="podium">
+        <h2>Лидеры чемпионата 2025</h2>
+        <div class="podium-positions">
+            <div class="place second">
+                <img src="img/leclerc.avif" alt="Шарль Леклер">
+                <span class="name">Шарль Леклер</span>
+                <span class="team">Ferrari</span>
+            </div>
+            <div class="place first">
+                <img src="img/piastri.avif" alt="Оскар Пиастри">
+                <span class="name">Оскар Пиастри</span>
+                <span class="team">McLaren</span>
+            </div>
+            <div class="place third">
+                <img src="img/verstappen.avif" alt="Макс Ферстаппен">
+                <span class="name">Макс Ферстаппен</span>
+                <span class="team">Red Bull</span>
+            </div>
+        </div>
+
+        <div class="standings-table">
+            <div class="standing-row">
+                <span class="position">1</span>
+                <span class="name">О. Пиастри</span>
+                <span class="points">252</span>
+            </div>
+            <div class="standing-row">
+                <span class="position">2</span>
+                <span class="name">Ш. Леклер</span>
+                <span class="points">235</span>
+            </div>
+            <div class="standing-row">
+                <span class="position">3</span>
+                <span class="name">М. Ферстаппен</span>
+                <span class="points">225</span>
+            </div>
+            <div class="standing-row">
+                <span class="position">4</span>
+                <span class="name">Л. Норрис</span>
+                <span class="points">180</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="sections">
+        <a href="drivers.html" class="card">
+            <img src="img/drivers.jpg" alt="Пилоты">
+            <h3>Пилоты</h3>
+        </a>
+        <a href="teams.html" class="card">
+            <img src="img/teams.jpeg" alt="Команды">
+            <h3>Команды</h3>
+        </a>
+        <a href="circuits.html" class="card">
+            <img src="img/circuits.jpg" alt="Трассы">
+            <h3>Трассы</h3>
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2025 Путеводитель по Формуле 1</p>
+    </footer>
+</body>
+</html>

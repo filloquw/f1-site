@@ -1,0 +1,206 @@
+<html>
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <title>Команды | Путеводитель по Формуле 1</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+                color: #eee;
+                font-family: 'Arial', sans-serif;
+                background-color: #111;
+                background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+                background-size: 20px 20px;
+                background-attachment: fixed;
+            }
+
+        main {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #000;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 1rem 2rem;
+        }
+
+        header a:hover {
+            color: #f00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #eee;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f00;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #222;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 0.8rem;
+            object-fit: cover;
+            height: 150px;
+        }
+
+        .card h3 {
+            margin: 0.5rem 0;
+            font-size: 1.3rem;
+            color: #f00;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+        ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #a00;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #800000;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="main.html">
+            <img src="img/f1logo.png" height="40px" alt="F1 Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="drivers.html">Пилоты</a></li>
+                <li><a href="circuits.html">Трассы</a></li>
+                <li><a href="season2025.html">Сезон 2025</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <center><h1>Команды Формулы 1</h1>
+        <p>Ниже представлены ведущие команды Формулы 1 - именно эти коллективы создают болиды, задающие темп сезона, <br>и ведут напряжённую борьбу за чемпионские титулы.</p></center>
+        <section class="sections">
+            <a href="teamInfo.html?id=redbull" class="card">
+                <img src="teams/red-bull-racing.avif" alt="Red Bull Racing">
+                <h3>Red Bull Racing</h3>
+            </a>
+            <a href="teamInfo.html?id=mercedes" class="card">
+                <img src="teams/mercedes.avif" alt="Mercedes">
+                <h3>Mercedes</h3>
+            </a>
+            <a href="teamInfo.html?id=mclaren" class="card">
+                <img src="teams/mclaren.avif" alt="McLaren">
+                <h3>McLaren</h3>
+            </a>
+            <a href="teamInfo.html?id=ferrari" class="card">
+                <img src="teams/ferrari.avif" alt="Ferrari">
+                <h3>Ferrari</h3>
+            </a>
+            <a href="teamInfo.html?id=alpine" class="card">
+                <img src="teams/alpine.avif" alt="Alpine">
+                <h3>Alpine</h3>
+            </a>
+            <a href="teamInfo.html?id=astonmartin" class="card">
+                <img src="teams/aston-martin.avif" alt="Aston Martin">
+                <h3>Aston Martin</h3>
+            </a>
+            <a href="teamInfo.html?id=williams" class="card">
+                <img src="teams/williams.avif" alt="Williams">
+                <h3>Williams</h3>
+            </a>
+            <a href="teamInfo.html?id=haas" class="card">
+                <img src="teams/haas.avif" alt="Haas">
+                <h3>Haas</h3>
+            </a>
+            <a href="teamInfo.html?id=kick_sauber" class="card">
+                <img src="teams/kick-sauber.avif" alt="Kick Sauber">
+                <h3>Kick Sauber</h3>
+            </a>
+            <a href="teamInfo.html?id=racing_bulls" class="card">
+                <img src="teams/racing-bulls.avif" alt="Racing Bulls">
+                <h3>Racing Bulls</h3>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Путеводитель по Формуле 1</p>
+    </footer>
+</body>
+</html>

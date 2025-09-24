@@ -1,0 +1,272 @@
+<html>
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <title>Информация о команде | Путеводитель по Формуле 1</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background: #111;
+            color: #eee;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+                color: #eee;
+                font-family: 'Arial', sans-serif;
+                background-color: #111;
+                background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+                background-size: 20px 20px;
+                background-attachment: fixed;
+            }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 1rem 2rem;
+        }
+
+        header a:hover {
+            color: #f00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #eee;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f00;
+        }
+
+        .team-info {
+            background: #222;
+            border-radius: 8px;
+            padding: 1rem 2rem;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+        }
+
+        .team-info img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #f00;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #000;
+            font-size: 0.9rem;
+        }
+        ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #a00;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #800000;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html">
+            <img src="img/f1logo.png" height="40px" alt="F1 Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="main.html">Главная</a></li>
+                <li><a href="drivers.html">Пилоты</a></li>
+                <li><a href="circuits.html">Трассы</a></li>
+                <li><a href="season2025.html">Сезон 2025</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="team-info" id="team-info">
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Путеводитель по Формуле 1</p>
+    </footer>
+
+    <script>
+        const teamsData = {
+    redbull: {
+        name: "Red Bull Racing",
+        img: "img/redbull.jpg",
+        description: "Red Bull Racing — одна из самых успешных команд в Формуле 1. Основана в 2005 году, команда быстро завоевала чемпионские титулы благодаря инновациям и сильным пилотам.",
+        drivers: [
+            { name: "Макс Ферстаппен", url: "driverInfo.html?id=verstappen" },
+            { name: "Серхио Перес", url: "driverInfo.html?id=tsunoda" }
+        ]
+    },
+    mercedes: {
+        name: "Mercedes",
+        img: "img/mercedes.jpg",
+        description: "Mercedes-AMG Petronas Formula One Team — доминирующая команда последних лет с множеством титулов чемпионов мира.",
+        drivers: [
+            { name: "Кими Антонелли", url: "driverInfo.html?id=antonelli" },
+            { name: "Джордж Расселл", url: "driverInfo.html?id=russell" }
+        ]
+    },
+    mclaren: {
+        name: "McLaren",
+        img: "img/mclaren.jpg",
+        description: "McLaren — легендарная британская команда, известная своей историей и техническими достижениями.",
+        drivers: [
+            { name: "Ландо Норрис", url: "driverInfo.html?id=norris" },
+            { name: "Оскар Пиастри", url: "driverInfo.html?id=piastri" }
+        ]
+    },
+    ferrari: {
+        name: "Ferrari",
+        img: "img/ferrari.jpg",
+        description: "Ferrari — самая старая и знаковая команда Формулы 1, с богатой историей и многократными чемпионскими титулами.",
+        drivers: [
+            { name: "Шарль Леклер", url: "driverInfo.html?id=leclerc" },
+            { name: "Льюис Хэмильтон", url: "driverInfo.html?id=hamilton" }
+        ]
+    },
+    alpine: {
+        name: "Alpine",
+        img: "img/alpine.jpg",
+        description: "Alpine — французская команда, которая быстро развивается и становится всё более конкурентоспособной в последних сезонах.",
+        drivers: [
+            { name: "Франко Колапинто", url: "driverInfo.html?id=colapinto" },
+            { name: "Пьер Гасли", url: "driverInfo.html?id=gasly" }
+        ]
+    },
+    astonmartin: {
+        name: "Aston Martin",
+        img: "img/astonmartin.jpg",
+        description: "Aston Martin — британская команда с богатой историей в автоспорте, вернувшаяся в Формулу 1 с амбициями стать лидером.",
+        drivers: [
+            { name: "Лэнс Стролл", url: "driverInfo.html?id=stroll" },
+            { name: "Фернандо Алонсо", url: "driverInfo.html?id=alonso" }
+        ]
+    },
+    williams: {
+        name: "Williams",
+        img: "img/williams.jpg",
+        description: "Williams — одна из самых успешных команд Формулы 1 прошлого, известная своей инженерной мощью и чемпионскими сезонами.",
+        drivers: [
+            { name: "Алекс Альбон", url: "driverInfo.html?id=albon" },
+            { name: "Карлос Сайнз", url: "driverInfo.html?id=sainz" }
+        ]
+    },
+    haas: {
+        name: "Haas",
+        img: "img/haas.jpg",
+        description: "Haas — американская команда, относительно молодая, но амбициозная, стремящаяся укрепить свои позиции в чемпионате.",
+        drivers: [
+            { name: "Эстебан Окон", url: "driverInfo.html?id=ocon" },
+            { name: "Оливер Берман", url: "driverInfo.html?id=bearman" }
+        ]
+    },
+    kick_sauber: {
+        name: "Kick Sauber",
+        img: "img/kick_sauber.jpg",
+        description: "Kick Sauber — швейцарская команда с интересной историей, которая возвращается в Формулу 1 с новыми силами и стратегиями.",
+        drivers: [
+            { name: "Нико Хюкельнберг", url: "driverInfo.html?id=hulkenberg" },
+            { name: "Габриэль Бортолето", url: "driverInfo.html?id=bortoleto" }
+        ]
+    },
+    racing_bulls: {
+        name: "Racing Bulls",
+        img: "img/racing_bulls.jpg",
+        description: "Racing Bulls — динамичная команда с быстрым ростом и амбициозными планами на будущее в мире Формулы 1.",
+        drivers: [
+            { name: "Лиам Лоусон", url: "driverInfo.html?id=lawson" },
+            { name: "Исаак Хаджар", url: "driverInfo.html?id=hadjar" }
+        ]
+    }
+};
+
+
+
+        const params = new URLSearchParams(window.location.search);
+        const teamId = params.get('id');
+
+        const teamInfoDiv = document.getElementById('team-info');
+
+        if (teamId && teamsData[teamId]) {
+    const team = teamsData[teamId];
+    let driversHTML = '';
+    if (team.drivers && team.drivers.length > 0) {
+        driversHTML = '<h2>Пилоты команды:</h2><ul>';
+        team.drivers.forEach(driver => {
+            driversHTML += `<li><a href="${driver.url}" style="color:#f00; text-decoration:none;">${driver.name}</a></li>`;
+        });
+        driversHTML += '</ul>';
+    }
+    teamInfoDiv.innerHTML = `
+        <h1>${team.name}</h1>
+        <p>${team.description}</p>
+        ${driversHTML}
+    `;
+} else {
+    teamInfoDiv.innerHTML = '<p>Команда не найдена. Пожалуйста, вернитесь на страницу <a href="teams.html">команд</a>.</p>';
+}
+
+    </script>
+</body>
+</html>

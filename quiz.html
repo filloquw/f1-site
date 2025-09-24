@@ -1,0 +1,458 @@
+<html>
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+    <title>Кто ты из гонщиков Формулы 1?</title>
+    <style>
+        body {
+            margin: 0;
+                color: #eee;
+                font-family: 'Arial', sans-serif;
+                background-color: #111;
+                background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+                background-size: 20px 20px;
+                background-attachment: fixed;
+            }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 1rem 2rem;
+        }
+
+        header a:hover {
+            color: #f00;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #f00;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        a {
+            color: #eee;
+            text-decoration: none;
+        }
+
+        .quiz-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #222;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        .question {
+            display: none;
+            text-align: center;
+        }
+
+        .question.active {
+            display: block;
+            animation: fade 0.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .question h2 {
+            margin-bottom: 1rem;
+            color: #f00;
+        }
+
+        .option {
+            background: #333;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.6rem 0;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background: #f00;
+            color: #111;
+        }
+
+        .progress {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            margin: 1rem 0 2rem;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #f00;
+            width: 0%;
+            transition: 0.3s;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        button#restart {
+            margin-top: 1rem;
+            padding: 0.6rem 1.2rem;
+            background: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button#restart:hover {
+            background: #c00;
+        }
+
+        #modal {
+            display: none; 
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: #222;
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            color: #eee;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #f00;
+            cursor: pointer;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #c00;
+        }
+        ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #a00;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #800000;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div id="main-content">
+        <header>
+            <a href="main.html">
+                <img src="img/f1logo.png" height="40px" alt="F1 logo">
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="drivers.html">Пилоты</a></li>
+                    <li><a href="teams.html">Команды</a></li>
+                    <li><a href="circuits.html">Трассы</a></li>
+                    <li><a href="season2025.html">Сезон 2025</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="quiz-container">
+            <h1 style="text-align:center;">Кто ты из гонщиков Формулы 1?</h1>
+
+            <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+
+            <div id="questions-container">
+            </div>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <p>Выбирайте по ощущениям, если не знаете ответ. Пилоты никогда не сомневаются!</p>
+        </div>
+    </div>
+
+    <script>
+        const pilots = [
+            "verstappen", "hamilton", "leclerc", "sainz",
+            "russell", "norris", "alonso", "tsunoda"
+        ];
+
+        const pilotNames = {
+            verstappen: "Макс Ферстаппен",
+            hamilton: "Льюис Хэмилтон",
+            leclerc: "Шарль Леклер",
+            sainz: "Карлос Сайнс",
+            russell: "Джордж Расселл",
+            norris: "Ландо Норрис",
+            alonso: "Фернандо Алонсо",
+            tsunoda: "Юки Цунода"
+        };
+
+        const pilotInfo = {
+            verstappen: {
+                description: "Агрессивный, быстрый и бескомпромиссный гонщик. Всегда идёт до конца.",
+                image: "result/verst.jpg"
+            },
+            hamilton: {
+                description: "Многократный чемпион, тонкий тактик и мастер старта.",
+                image: "result/ham.jpg"
+            },
+            leclerc: {
+                description: "Юный талант с эффектным стилем вождения и сильным характером.",
+                image: "result/leclerc.jpg"
+            },
+            sainz: {
+                description: "Надёжный командный игрок, стратег и мастер пит-стопов.",
+                image: "result/sainz.jpg"
+            },
+            russell: {
+                description: "Холодный и расчётливый, но умеет рискнуть в нужный момент.",
+                image: "result/russell.jpg"
+            },
+            norris: {
+                description: "Весёлый, дерзкий и харизматичный гонщик с отменным чувством трассы.",
+                image: "result/norris.jpg"
+            },
+            alonso: {
+                description: "Опытный ветеран, умеющий выжимать максимум из любой машины.",
+                image: "result/alonso.jpg"
+            },
+            tsunoda: {
+                description: "Импульсивный и страстный, всегда готовый к борьбе.",
+                image: "result/yuki.jpg"
+            }
+        };
+
+        const questions = [
+            {
+                question: "Какой у тебя стиль в гонке?",
+                options: [
+                    { text: "Атакующий", scores: { verstappen: 3, sainz: 2, tsunoda: 1 } },
+                    { text: "Тактический", scores: { hamilton: 3, alonso: 2, russell: 1 } },
+                    { text: "Рискованный", scores: { leclerc: 3, norris: 2 } },
+                    { text: "Холодный и расчётливый", scores: { russell: 3, verstappen: 2 } }
+                ]
+            },
+            {
+                question: "Любимая трасса?",
+                options: [
+                    { text: "Спа-Франкоршам", scores: { verstappen: 3, leclerc: 2 } },
+                    { text: "Монца", scores: { sainz: 3, hamilton: 2 } },
+                    { text: "Сильверстоун", scores: { russell: 3, norris: 2 } },
+                    { text: "Монако", scores: { leclerc: 3, tsunoda: 2 } }
+                ]
+            },
+            {
+                question: "Что для тебя важнее всего?",
+                options: [
+                    { text: "Победа любой ценой", scores: { verstappen: 3, sainz: 2 } },
+                    { text: "Красивая борьба", scores: { hamilton: 3, russell: 2 } },
+                    { text: "Зрелищность", scores: { leclerc: 3, norris: 2 } },
+                    { text: "Стабильность и опыт", scores: { alonso: 3, tsunoda: 2 } }
+                ]
+            },
+            {
+                question: "Какие шины ты выбрал бы?",
+                options: [
+                    { text: "Мягкие, чтобы атаковать", scores: { verstappen: 3, leclerc: 2 } },
+                    { text: "Жёсткие и надёжные", scores: { alonso: 3, hamilton: 2 } },
+                    { text: "Средние — баланс всего", scores: { russell: 3, sainz: 2 } },
+                    { text: "Выберу то, что принесёт выгоду", scores: { norris: 3, tsunoda: 2 } }
+                ]
+            },
+            {
+                question: "Как ты реагируешь на неудачу?",
+                options: [
+                    { text: "Злюсь и борюсь", scores: { verstappen: 3, tsunoda: 2 } },
+                    { text: "Делаю выводы", scores: { hamilton: 3, russell: 2 } },
+                    { text: "Иду ва-банк", scores: { leclerc: 3, norris: 2 } },
+                    { text: "Спокойно, без паники", scores: { alonso: 3, sainz: 2 } }
+                ]
+            },
+            {
+                question: "Какой твой главный плюс?",
+                options: [
+                    { text: "Скорость", scores: { verstappen: 3, leclerc: 2 } },
+                    { text: "Опыт", scores: { alonso: 3, hamilton: 2 } },
+                    { text: "Харизма", scores: { norris: 3, tsunoda: 2 } },
+                    { text: "Тактика", scores: { russell: 3, sainz: 2 } }
+                ]
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let scores = {};
+        pilots.forEach(pilot => scores[pilot] = 0);
+
+        const questionsContainer = document.getElementById('questions-container');
+        const progressBar = document.getElementById('progressBar');
+        const resultContainer = document.getElementById('result');
+
+        function showQuestion(index) {
+            questionsContainer.innerHTML = "";
+            if (index >= questions.length) {
+                showResult();
+                return;
+            }
+
+            let q = questions[index];
+            let questionDiv = document.createElement('div');
+            questionDiv.classList.add('question', 'active');
+
+            let questionTitle = document.createElement('h2');
+            questionTitle.textContent = q.question;
+            questionDiv.appendChild(questionTitle);
+
+            q.options.forEach((option, idx) => {
+                let optDiv = document.createElement('div');
+                optDiv.classList.add('option');
+                optDiv.textContent = option.text;
+                optDiv.onclick = () => {
+                    for (const pilot in option.scores) {
+                        scores[pilot] += option.scores[pilot];
+                    }
+                    currentQuestionIndex++;
+                    updateProgress();
+                    showQuestion(currentQuestionIndex);
+                };
+                questionDiv.appendChild(optDiv);
+            });
+
+            questionsContainer.appendChild(questionDiv);
+        }
+
+        function updateProgress() {
+            let percent = (currentQuestionIndex / questions.length) * 100;
+            progressBar.style.width = percent + "%";
+        }
+
+        function showResult() {
+            questionsContainer.style.display = "none";
+            progressBar.style.width = "100%";
+
+            // Найдем пилота с максимальным результатом
+            let maxScore = 0;
+            let winner = null;
+            for (const pilot in scores) {
+                if (scores[pilot] > maxScore) {
+                    maxScore = scores[pilot];
+                    winner = pilot;
+                }
+            }
+
+            resultContainer.innerHTML = `
+                <h2>Вы - ${pilotNames[winner]}!</h2>
+                <img src="${pilotInfo[winner].image}" alt="${pilotNames[winner]}" style="width:200px; border-radius: 8px; box-shadow: 0 0 15px #f00;">
+                <p style="margin-top: 1rem;">${pilotInfo[winner].description}</p>
+                <button id="restart">Пройти заново</button>
+            `;
+
+            document.getElementById('restart').onclick = () => {
+                // Сбросим состояние
+                currentQuestionIndex = 0;
+                scores = {};
+                pilots.forEach(pilot => scores[pilot] = 0);
+
+                questionsContainer.style.display = "block";
+                resultContainer.innerHTML = "";
+                updateProgress();
+                showQuestion(currentQuestionIndex);
+            };
+        }
+
+        // Инициализация
+        showQuestion(currentQuestionIndex);
+        updateProgress();
+
+        // --- Модальное окно с блюром ---
+        const modal = document.getElementById('modal');
+        const modalCloseBtn = document.getElementById('modalClose');
+        const mainContent = document.getElementById('main-content');
+
+        window.onload = () => {
+            modal.style.display = 'flex';
+            mainContent.style.filter = 'blur(5px)';
+        };
+
+        modalCloseBtn.onclick = () => {
+            modal.style.display = 'none';
+            mainContent.style.filter = 'none';
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                mainContent.style.filter = 'none';
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<meta charset="UTF-8" />
+<title>Сезон 2025 | Путеводитель</title>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: #111;
+        color: #eee;
+        font-family: 'Arial', sans-serif;
+    }
+    body {
+                color: #eee;
+                font-family: 'Arial', sans-serif;
+                background-color: #111;
+                background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+                background-size: 20px 20px;
+                background-attachment: fixed;
+            }
+    main { flex: 1; }
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background: #000;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #000;
+        padding: 1rem 2rem;
+    }
+    .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #f00;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+    }
+    nav a {
+        color: #eee;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    nav a:hover {
+        color: #f00;
+    }
+    .sections {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    .card {
+        background: #222;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 270px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card h3 {
+        margin: 0.5rem 0;
+        font-size: 1.3rem;
+        color: #f00;
+    }
+    .card p {
+        font-size: 1rem;
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="main.html">
+        <img src="img/f1logo.png" height="40px" alt="Логотип Формулы 1">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="drivers.html">Пилоты</a></li>
+            <li><a href="teams.html">Команды</a></li>
+            <li><a href="circuits.html">Трассы</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="about">
+        <h1><center>Сезон Формулы 1 - 2025</center></h1>
+        <p><center>По представленным ниже карточкам Вы можете кликнуть, перейдя на источник с выбранной гонкой.</center></p>
+    </section>
+
+    <section class="sections" id="race-list">
+    </section>
+</main>
+<footer>
+    <p>© 2025 Путеводитель по Формуле 1</p>
+</footer>
+
+<script>
+const races = [
+    {name: "Гран-При Австралии", date: "2025-03-16", location: "Мельбурн, Альберт-Парк", videoUrl: "https://m.vkvideo.ru/video-212096379_456239428"}, 
+    {name: "Гран-При Китая", date: "2025-03-23", location: "Шанхай, Международный автодром", videoUrl: "https://m.vkvideo.ru/video-212096379_456239441"},
+    {name: "Гран-При Японии", date: "2025-04-06", location: "Сузука", videoUrl: "https://m.vkvideo.ru/video-212096379_456239453"},
+    {name: "Гран-При Бахрейна", date: "2025-04-13", location: "Сахир, Международный автодром", videoUrl: "https://m.vkvideo.ru/video-212096379_456239467"},
+    {name: "Гран-При Саудовской Аравии", date: "2025-04-20", location: "Джидда, городская трасса", videoUrl: "https://m.vkvideo.ru/video-212096379_456239481"},
+    {name: "Гран-При Майами", date: "2025-05-04", location: "Майами, Международный автодром", videoUrl: "https://m.vkvideo.ru/video-212096379_456239509"},
+    {name: "Гран-При Эмилия-Романия", date: "2025-05-18", location: "Имола, Автодром Энцо и Дино Феррари", videoUrl: "https://m.vkvideo.ru/video-212096379_456239539"},
+    {name: "Гран-При Монако", date: "2025-05-25", location: "Монте-Карло, городская трасса", videoUrl: "https://m.vkvideo.ru/video-212096379_456239564"},
+    {name: "Гран-При Испании", date: "2025-06-01", location: "Барселона, Барселона-Каталунья", videoUrl: "https://m.vkvideo.ru/video-212096379_456239582"},
+    {name: "Гран-При Канады", date: "2025-06-15", location: "Монреаль, Автодром имени Жиля Вильнёва", videoUrl: "https://m.vkvideo.ru/video-212096379_456239616"},
+    {name: "Гран-При Австрии", date: "2025-06-29", location: "Шпильберг, Ред Булл Ринг", videoUrl: ""},
+    {name: "Гран-При Великобритании", date: "2025-07-06", location: "Сильверстоун", videoUrl: ""},
+    {name: "Гран-При Венгрии", date: "2025-07-20", location: "Будапешт, Хунгароринг", videoUrl: ""},
+    {name: "Гран-При Бельгии", date: "2025-07-27", location: "Спойль, Спа-Франкоршам", videoUrl: ""},
+    {name: "Гран-При Нидерландов", date: "2025-08-31", location: "Зандворт", videoUrl: ""},
+    {name: "Гран-При Италии", date: "2025-09-07", location: "Монца", videoUrl: ""},
+    {name: "Гран-При Сингапура", date: "2025-09-21", location: "Сингапур, городская трасса", videoUrl: ""},
+    {name: "Гран-При России", date: "2025-09-28", location: "Сочи", videoUrl: ""},
+    {name: "Гран-При Японии", date: "2025-10-05", location: "Сузука", videoUrl: ""},
+    {name: "Гран-При США", date: "2025-10-19", location: "Остин, Техас", videoUrl: ""},
+    {name: "Гран-При Мексики", date: "2025-10-26", location: "Мехико", videoUrl: ""},
+    {name: "Гран-При Бразилии", date: "2025-11-02", location: "Сан-Паулу, Интерлагос", videoUrl: ""},
+    {name: "Гран-При Абу-Даби", date: "2025-11-23", location: "Яс-Марина", videoUrl: ""}
+];
+
+function hasRacePassed(raceDate) {
+    const today = new Date();
+    const raceDay = new Date(raceDate);
+    return raceDay < today;
+}
+
+const raceList = document.getElementById('race-list');
+
+races.forEach(race => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h3>${race.name}</h3><p>Дата: ${race.date}</p><p>Место: ${race.location}</p>`;
+    
+    card.addEventListener('click', () => {
+        if (hasRacePassed(race.date)) {
+            if (race.videoUrl) {
+                window.open(race.videoUrl, '_blank');
+            } else {
+                alert('Видео для этой гонки пока недоступно.');
+            }
+        } else {
+            alert('Рано! Дождитесь выбранной Вами даты!');
+        }
+    });
+
+    raceList.appendChild(card);
+});
+</script>
+</body>
+</html>

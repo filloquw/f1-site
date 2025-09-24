@@ -1,0 +1,306 @@
+<html>
+    <head>
+      <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104272398', 'ym');
+
+    ym(104272398, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104272398" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R9F5Q1P871"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R9F5Q1P871');
+</script>
+        <title></title>
+        <style>
+            #content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    overflow: hidden; 
+}
+
+.driver-photo {
+    float: left;
+    width: 320px;
+    margin-right: 2rem;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+.driver-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    border: 3px solid #f00;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.driver-photo img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
+.driver-info {
+    overflow: hidden; 
+}
+
+.driver-info h1 {
+    font-size: 2.5rem;
+    color: #f00;
+    margin-top: 0;
+}
+
+.driver-info h2 {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+}
+
+.driver-info p {
+    font-size: 1.2rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .driver-photo {
+        float: none;
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+    .driver-info {
+        text-align: center;
+    }
+}
+
+            html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            }
+
+            body {
+                color: #eee;
+                font-family: 'Arial', sans-serif;
+                background-color: #111;
+                background-image:
+                linear-gradient(45deg, rgba(255, 0, 0, 0.074) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(255, 0, 0, 0.03) 25%, transparent 25%);
+                background-size: 20px 20px;
+                background-attachment: fixed;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            footer {
+                text-align: center;
+                padding: 1rem;
+                background: #000;
+            }
+
+            header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 1rem 2rem;
+            }
+
+            header a:hover{
+                color: #f00;
+            }
+            
+            .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f00;
+            }
+
+            nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.2rem;
+            margin: 0;
+            padding: 0;
+            }
+
+            a {
+            color: #eee;
+            text-decoration: none;
+            font-weight: 500;
+            }
+
+            nav a:hover {
+            color: #f00;
+            }
+            ::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #f0f0f0;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #a00;
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #800000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="main.html">
+                <img src="img/f1logo.png" height="40px">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Главная</a></li>
+                    <li><a href="teams.html">Команды</a></li>
+                    <li><a href="circuits.html">Трассы</a></li>
+                    <li><a href="season2025.html">Сезон 2025</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+    <div id="content">
+        <div class="driver-photo">
+            <img id="driverImage" src="" alt="">
+        </div>
+        <div class="driver-info">
+            <h1 id="driverName"></h1>
+            <h2 id="driverTeam"></h2>
+            <p id="driverNumber"></p>
+            <p id="driverBio"></p>
+        </div>
+    </div>
+</main>
+
+
+        <footer>
+            <p>© 2025 Путеводитель по Формуле 1</p>
+        </footer>
+
+        <script>
+const drivers = {
+  piastri: {
+    name: "Оскар Пиастри",
+    team: "McLaren",
+    number: "81",
+    image: "img/piastri.avif",
+    bio: "Австралиец, чемпион Формулы 2, правая рука McLaren на трассе.",
+    human: `Известен невозмутимым спокойствием: даже когда нервничает, остаётся собранным. Недавно выполнял "Griddy" в Маями — неловко, но его поддержали фанаты и NFL. Очень ценит взаимодействие с болельщиками: рассказал истории, реагировал на фан-сообщения, делал селфи и автографы в зоне фан-зоны.`
+  },
+  norris: {
+    name: "Ландо Норрис",
+    team: "McLaren",
+    number: "4",
+    image: "img/norris.avif",
+    bio: "Британец, душевный, один из самых открытых пилотов F1.",
+    human: `Откровенно говорил о тревожности и депрессии, собрал более \$12 000 на благотворительность через стримы. Reddit-пользователи пишут:
+“Before I discovered who Lando… I always felt so alone with my anxiety… Then I discovered Lando.” Он проводит фан-встречи, делает селфи и любит смешить людей.`
+  },
+  verstappen: {
+    name: "Макс Ферстаппен",
+    team: "Red Bull Racing",
+    number: "1",
+    image: "img/verstappen.avif",
+    bio: "Голландец, чемпион, сосредоточенный боец.",
+    human: `Редко выходит в соцсети, но в интервью говорит, что уязвимости — не его стиль. Его уважает как соперник: концентрируется на трассе и редко отвлекается от гонок.`
+  },
+  russel: {
+    name: "Джордж Рассел",
+    team: "Mercedes",
+    number: "63",
+    image: "img/russell.avif",
+    bio: "Британец с большим потенциалом.",
+    human: `Известен дружелюбием — часто остаётся после сессий, беседует с командой и юниорами, делает селфи и отвечает на вопросы.`
+  },
+  leclerc: { name: "Шарль Леклер", team: "Ferrari", number: "16", image: "img/leclerc.avif", bio: "Монегаск, аналитик и гонщик.",
+    human: `Любит музыку и шахматы, играет на пианино. Вежлив с фанатами, особенно на гонках в Монако.` },
+  hamilton: { name: "Льюис Хэмилтон", team: "Mercedes", number: "44", image: "img/hamilton.avif", bio: "Семикратный чемпион, активист.",
+    human: `Пишет музыку, интересуется модой и скейтбордом. Очень открыт к фанатам, участвует в соцдвижениях (BLM), всегда даёт автографы.` },
+  antonelli: { name: "Кими Антонелли", team: "Mercedes", number: "12", image: "img/antonelli.avif", bio: "Юниор Mercedes.",
+    human: `Любит футбол и велоспорт. Открыт с фанатами, часто делится моментами из жизни юниора.` },
+  albon: { name: "Александр Албон", team: "Williams", number: "23", image: "img/albon.avif", bio: "Тайско-британец.",
+    human: `Фанат гольфа, дружелюбен, часто общается с болельщиками в паддоке.` },
+  hadjar: { name: "Исаак Хаджар", team: "Racing Bulls", number: "6", image: "img/hadjar.avif", bio: "Француз алжирского происхождения.",
+    human: `Увлекается дрифтом и скалолазанием, активно участвует в фан-ивентах.` },
+  ocon: { name: "Эстебан Окон", team: "Haas", number: "31", image: "img/ocon.avif", bio: "Француз‑сдержанный.",
+    human: `Любит велосипед и футбол, вежлив, отвечает на вопросы болельщиков.` },
+  hulkenberg: { name: "Нико Хюлькенберг", team: "Kick Sauber", number: "27", image: "img/hulkenberg.avif", bio: "Немецкий ветеран.",
+    human: `Любит теннис и путешествия, часто делится снимками с фанатами.` },
+  stroll: { name: "Лэнс Стролл", team: "Aston Martin", number: "18", image: "img/stroll.avif", bio: "Канадец, сын владельца команды.",
+    human: `Увлекается лыжами, коллекционирует часы, иногда делает туры по команде для фанатов.` },
+  sainz: { name: "Карлос Сайнс", team: "Williams", number: "55", image: "img/sainz.avif", bio: "Испанец, сын раллийной легенды.",
+    human: `Любит гольф, футбол и паэлью, не прочь пообщаться с фанатами на испанских мероприятиях.` },
+  gasly: { name: "Пьер Гасли", team: "Alpine", number: "10", image: "img/gasly.avif", bio: "Француз, модный и спортивный.",
+    human: `Коллекционирует кроссовки, увлечён баскетболом, часто шутит с болельщиками в паддоке.` },
+  tsunoda: { name: "Юки Тсунода", team: "Red Bull Racing", number: "22", image: "img/tsunoda.avif", bio: "Японец с огоньком.",
+    human: `Любит суши и видеоигры, активен в социальных сетях, отвечает фанатам.` },
+  bearman: { name: "Оливер Берман", team: "Haas", number: "87", image: "img/bearman.avif", bio: "Молодая надежда.",
+    human: `Играет на гитаре, любит велопрогулки, часто даёт интервью о жизни за пределами трассы.` },
+  lawson: { name: "Лиам Лоусон", team: "Racing Bulls", number: "30", image: "img/lawson-racing-bulls.avif", bio: "Новозеландец.",
+    human: `Фанат регби и мотоспорта, часто общается с фан-зоной и смеётся с ними.` },
+  alonso: { name: "Фернандо Алонсо", team: "Aston Martin", number: "14", image: "img/alonso.avif", bio: "Ветеран‑гонщик.",
+    human: `Любит велоспорт и лыжи, иногда фанаты встречают его на трассах вне F1.` },
+  bortoleto: { name: "Габриэль Бортолето", team: "Kick Sauber", number: "5", image: "img/bortoleto.avif", bio: "Бразилец, звезда F3.",
+    human: `Увлекается пляжным волейболом и бразильской кухней, всегда приветлив.` },
+  doohan: { name: "Джек Дуэн", team: "Alpine", number: "7", image: "img/doohan.avif", bio: "Австралиец, сын легенды MotoGP.",
+    human: `Любит серфинг и картинг, часто рассказывает истории о папе и уделяет внимание фанатам.` },
+  colapinto: { name: "Франко Колапинто", team: "Alpine", number: "43", image: "img/colapinto.avif", bio: "Аргентинец‑талант.",
+    human: `Любит аргентинское асадо и настольный теннис, с удовольствием общается на испанском с фанатами.` }
+};
+
+const params = new URLSearchParams(window.location.search);
+const driverId = params.get('id');
+const content = document.getElementById("content");
+
+if (driverId && drivers[driverId]) {
+  const d = drivers[driverId];
+  document.getElementById("driverName").textContent = d.name;
+  document.getElementById("driverTeam").textContent = d.team;
+  document.getElementById("driverNumber").textContent = `#${d.number}`;
+  document.getElementById("driverImage").src = d.image;
+  document.getElementById("driverBio").textContent = d.bio;
+
+  const humanP = document.createElement("p");
+  humanP.textContent = d.human;
+  content.appendChild(humanP);
+
+  document.title = d.name + " | Путеводитель по Формуле 11";
+} 
+
+</script>
+
+
+    </body>
+</html>
